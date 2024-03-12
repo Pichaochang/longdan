@@ -1,0 +1,18 @@
+.textCard {
+  display: flex;
+  flex-direction: column;
+  .label {
+    font-size: 16px;
+    font-weight: bold;
+    width: 60px;
+    text-align: left;
+    margin-right: 12px;
+  }
+  .input {
+     background: #061113;
+      opacity: .24;
+      width: 100%;
+      border: 1px solid #bfbfbf;
+      border-radius: 8px
+  }
+}
