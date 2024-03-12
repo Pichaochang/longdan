@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Toast, Button, SpinLoading, Mask } from "antd-mobile";
 import InputCard from "./components/inputCard";
-import styles from "@/pages/Upgradation/index.module.scss";
+import styles from "./index.module.scss";
 import Web3Class from "@/unit/webnew";
 
 const web3: any = new Web3Class();
