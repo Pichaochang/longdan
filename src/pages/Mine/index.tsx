@@ -42,11 +42,11 @@ const Mine = () => {
         changeLoading(false);
       });
       console.log(hash)
-      if(hash?.length) {
+      if (hash?.length) {
         const paramsHash = await web3.exchange(val).catch(() => {
           changeLoading(false);
         });
-        if(paramsHash?.length) Toast.show('213')
+        if (paramsHash?.length) Toast.show('213')
       }
       changeLoading(false);
     } catch (error) {
@@ -81,36 +81,34 @@ const Mine = () => {
           <div>{address}</div>
         </div>
       </div>
-      <div className="">
+      <div className="egg-div">
         <img src="/egg.png" alt="" />
       </div>
-      <div>
+      <div className="text-bit">
         Bit world（比特世界）Wbe.3生態。 Bit world由美國矩陣資本領投聯合澳大利亞加密貨幣研發組織發起； 基於幣安智令78% C完全去中心化Wbe.3金融商業生態，打造Wbe.3社交軟件與元宇宙平臺：為引流龐大用戶參與，平臺發行代幣BTB作為未來整個生態應用通證助力參與者實現自身價值。
       </div>
 
+      <div className="text-bit">
+        <div className="long-text">1龙蛋+1USDT兑换=1BTB</div>
+        <div className={styles.content}>
+          <InputCard onChange={onChange} inputValue={inputValue} />
+          <Button
+            onClick={() => buyFn()}
+            size="small"
+            color="primary"
+            style={{
+              background: "#0F6FCE",
+              color: "#fff",
+              width: "100%",
+              height: "40px",
+            }}
+          >
+            确认兑换
+          </Button>
+          <div className="web3-text">web3|元宇宙</div>
+        </div>
+      </div>
 
-      <div>
-   
-        <div>Bit world（比特世界）Wbe.3生態。 Bit world由美國矩陣資本領投聯合澳大利亞加密貨幣研發組織發起； 基於幣安智令78% C完全去中心化Wbe.3金融商業生態，打造Wbe.3社交軟件與元宇宙平臺：為引流龐大用戶參與，平臺發行代幣BTB作為未來整個生態應用通證助力參與者實現自身價值。</div>
-      </div>
-      <div>1龙蛋+1USDT兑换=1BTB</div>
-      <div className={styles.content}>
-        <InputCard onChange={onChange} inputValue={inputValue} />
-        <Button
-          onClick={() => buyFn()}
-          size="small"
-          color="primary"
-          style={{
-            background: "rgba(80, 240, 192, 0.1)",
-            color: "rgb(80, 240, 192)",
-            width: "100%",
-            height: "40px",
-          }}
-        >
-          确认兑换
-        </Button>
-        <div>web3|元宇宙</div>
-      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 :root {
-
+  --adm-color-text-dark-solid: #05356B
 }
 
 a {
@@ -55,12 +55,12 @@ p {
 
 a {
   font-weight: 500;
-  color: #50f0c0;
+  color: #05356B;
   text-decoration: inherit
 }
 
 a:hover {
-  color: #50f0c0
+  color: #05356B
 }
 
 body {
@@ -133,4 +133,26 @@ code {
 }
 .header-right-img{
 
+}
+.egg-div {
+  text-align: center;
+}
+.text-bit {
+  background: #040911;
+  border-radius: 16px;
+  border: 1px solid #05356B;
+  padding: 19px;
+}
+.long-text {
+  background: #040911;
+  border-radius: 16px;
+  border: 1px solid #05356B;
+}
+
+.web3-text {
+  font-family: PingFang SC;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+  opacity: 0.5;
 }
