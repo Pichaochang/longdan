@@ -1,5 +1,5 @@
 :root {
-  --adm-color-text-dark-solid: #05356B
+  --adm-color-text-dark-solid: #05356b;
 }
 
 a {
@@ -50,69 +50,72 @@ button:focus-visible {
 
 p {
   margin: 0;
-  line-height: 24px
+  line-height: 24px;
 }
 
 a {
   font-weight: 500;
-  color: #05356B;
-  text-decoration: inherit
+  color: #05356b;
+  text-decoration: inherit;
 }
 
 a:hover {
-  color: #05356B
+  color: #05356b;
 }
 
 body {
   margin: 0;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1
+  line-height: 1.1;
 }
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: .6em 1.2em;
+  padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color .25s
+  transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff
+  border-color: #646cff;
 }
 
-button:focus,button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(/back.png);
-  background-repeat: round
+  background-repeat: round;
 }
 
 code {
-  font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
 }
 .home {
   width: 100%;
   height: 100%;
   padding: 20px;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 .header {
 }
@@ -122,37 +125,61 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
-.header-left-img{
+.header-left-img {
   width: 30px;
   height: 40px;
 }
-.header-right{
-
+.header-right {
+  display: flex;
+  background: #30323E;
+  border-radius: 24px;
+  border: 2px solid #22252A;
+  padding: 7px 10px;
 }
-.header-right-img{
+.header-right-img {
 
 }
 .egg-div {
   text-align: center;
 }
 .text-bit {
+  font-family: PingFang SC;
   background: #040911;
   border-radius: 16px;
-  border: 1px solid #05356B;
+  border: 1px solid #05356b;
   padding: 19px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #3b3d42;
+  /* opacity: 0.5; */
 }
 .long-text {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 700;
+  font-style: italic;
   background: #040911;
   border-radius: 16px;
-  border: 1px solid #05356B;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 1;
+
+  /* border: 1px solid #05356B; */
 }
 
 .web3-text {
   font-family: PingFang SC;
   font-weight: 500;
-  font-size: 24px;
-  color: #FFFFFF;
+  font-size: 12px;
+  color: #ffffff;
   opacity: 0.5;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.web-input{
+  background: #031427;
+  border-radius: 12px;
+  border: 1px solid #0F385D;
 }
