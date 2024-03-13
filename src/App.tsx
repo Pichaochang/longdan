@@ -3,6 +3,7 @@ import Web3Class from '@/unit/webnew';
 import Mine from '@/pages/Mine'
 import styles from './index.module.scss'
 import { Route, MemoryRouter , Routes } from "react-router-dom";
+// import { Toast } from 'antd-mobile';
 
 const web3 = new Web3Class()
 function App() {
@@ -11,7 +12,10 @@ function App() {
 
   const queryInit = async() => {
     const res = await web3.translateSign()
-    if(!res) return alert('請切換網絡或連結錢包')
+    if(!res) {
+      // Toast.show('請切換網絡或連結錢包')
+      return
+    }
     setSignature(false)
   }
 

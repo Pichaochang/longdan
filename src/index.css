@@ -105,7 +105,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(/back.png);
-  background-repeat: round;
+  /* background-repeat: round; */
+  background-size: 100%
 }
 
 code {
@@ -142,6 +143,7 @@ code {
 .header-right-img {
   width: 15px;
   height: 14px;
+  margin-right: 3px;
 }
 .egg-div {
   text-align: center;

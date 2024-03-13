@@ -14,8 +14,6 @@ const Mine = () => {
   const formatAddress:any = function(a:any) {
     const firstSix = a.substr(0, 6);
     const lastSix = a.substr(-6);
-    console.log("前6位:", firstSix);
-    console.log("后6位:", lastSix);
     return `${firstSix}...${lastSix}`
   }
 
@@ -37,6 +35,10 @@ const Mine = () => {
   };
   const buyFn = async () => {
     console.log(111)
+    if (Number(inputValue) <= 0) {
+      Toast.show('請輸入大於0')
+      return
+    }
     changeLoading(true);
     try {
       // const params = {
@@ -71,6 +73,10 @@ const Mine = () => {
   }, []);
 
   const onChange = (val) => {
+    // if (Number(val) <= 0) {
+    //   // Toast.show('請輸入大於0')
+    //   return
+    // }
     setInputValue(val);
   };
   return (
@@ -84,14 +90,16 @@ const Mine = () => {
         <img className="header-left-img" src="/BTB.png" alt="" />
         <div className="header-right">
           <img className="header-right-img" src="/1.png" alt="" />
-          <div>{formatAddress(address)}</div>
+          <div>{!address ? 
+          <span style={{color: '#fff'}} onClick={queryInit}>鏈結錢包</span>
+          :formatAddress(address)}</div>
         </div>
       </div>
       <div className="egg-div">
         <img src="/egg.png" alt="" />
       </div>
       <div className="text-bit" style={{marginTop: '-30px', position: 'relative', fontSize: '16px'}}>
-        Bit world（比特世界）Wbe.3生態。 Bit world由美國矩陣資本領投聯合澳大利亞加密貨幣研發組織發起； 基於幣安智令78% C完全去中心化Wbe.3金融商業生態，打造Wbe.3社交軟件與元宇宙平臺：為引流龐大用戶參與，平臺發行代幣BTB作為未來整個生態應用通證助力參與者實現自身價值。
+        Bit world(比特世界)Wbe.3生態。Bit world由美國矩陣資本領投聯合澳大利亞加密貨幣研發組織發起;基於幣安智令78%C完全去中心化Wbe.3金融商業生態,打造Wbe.3社交軟件與元宇宙平臺:為引流龐大用戶參與,平臺發行代幣BTB作為未來整個生態應用通證助力參與者實現自身價值。
       </div>
 
       <div className="text-bit">
