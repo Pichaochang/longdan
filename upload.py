@@ -31,8 +31,8 @@ def main():
     password = "ZBZshishuaige97"
     print(mode)
     if (mode == 'dev'):    
-      local_path = "/Users/pro/GitHub/qlin/dist"
-      remote_path = "/usr/local/bgtm/build"
+      local_path = "/Users/pro/GitHub/longdan/dist"
+      remote_path = "/usr/local/bgtm/longdan"
     # else: 
     #   local_path = "/Users/pro/GitHub/qlin/dist"
     #   remote_path = "/usr/local/bgtm/prod"

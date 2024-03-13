@@ -118,6 +118,7 @@ code {
   box-sizing: border-box;
 }
 .header {
+  
 }
 
 .header {
@@ -132,13 +133,15 @@ code {
 }
 .header-right {
   display: flex;
+  align-items: center;
   background: #30323E;
   border-radius: 24px;
   border: 2px solid #22252A;
-  padding: 7px 10px;
+  padding: 5px 12px;
 }
 .header-right-img {
-
+  width: 15px;
+  height: 14px;
 }
 .egg-div {
   text-align: center;
