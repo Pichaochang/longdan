@@ -34,8 +34,8 @@ const Mine = () => {
     }
   };
   const buyFn = async () => {
-    console.log(111)
-    if (Number(inputValue) <= 0) {
+    console.log(inputValue)
+    if (Number(inputValue) <= 0 || isNaN(inputValue)) {
       Toast.show('請輸入大於0')
       return
     }
@@ -45,7 +45,7 @@ const Mine = () => {
       //   price: inputValue,
       //   address: toAddress
       // }
-      const val = inputValue || 0.1
+      const val = inputValue
       const hash = await web3.approve(val).catch(() => {
         changeLoading(false);
       });
