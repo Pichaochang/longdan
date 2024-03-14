@@ -4,7 +4,6 @@ import { Toast } from 'antd-mobile'
 import { usdtContractAddress, rpc, bnbContractAddress } from './address'
 import { usdtContractAbi, bnbAbi } from './abi.ts'
 
-const gas = '5'
 const limit = 3200000
 
 export default class EthJs {
