@@ -83,7 +83,6 @@ export default class EthJs {
       return res
     } catch (error) {
       console.log(error)
-
       Toast.clear()
       return null
     }
@@ -95,6 +94,8 @@ export default class EthJs {
     const accounts = await provider.listAccounts();
     const usdtBalance = await usdtContract.balanceOf(accounts[0]);
     const balanceInUSDT = ethers.utils.formatUnits(usdtBalance, '18'); 
+    console.log('balanceInUSDT', balanceInUSDT)
+
     return Math.floor(Number(balanceInUSDT) || 0)
   }
   translateSign = async () => {
