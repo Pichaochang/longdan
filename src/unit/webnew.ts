@@ -26,7 +26,7 @@ export default class EthJs {
   approve = async (val) => {
     try {
       /***  把下面的 1 替换成 输入框对应的额度  ***/
-      const amountInWei = ethers.utils.parseEther(val.toString(), '12 '); // 100 USDT的Wei值
+      const amountInWei = ethers.utils.parseEther(val.toString(), '18'); // 100 USDT的Wei值
       console.log('approve', amountInWei)
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       // 创建USDT合约实例
@@ -36,12 +36,10 @@ export default class EthJs {
       const data = usdtContract.interface.encodeFunctionData('approve', [bnbContractAddress, amountInWei]);
       const accounts = await window.ethereum.enable()
       const newgasLimit = ethers.utils.hexlify(limit); // 适当增加 gas 限制的值
-      const gasPrice = ethers.utils.parseUnits(gas, 'gwei'); // 适当的 gas 价格（示例值）
       // 构建交易对象
       const transactionObject = {
         to: usdtContractAddress, // 合约地址
         gasLimit: newgasLimit, // gas限制
-        gasPrice: gasPrice._hex,
         data, // 要转账的数据
         from: accounts[0],
         // value: amountInWei
@@ -63,7 +61,7 @@ export default class EthJs {
     }
     try {
       /***  把下面的 1 替换成 输入框对应的额度  ***/
-      const amountInWei = ethers.utils.parseUnits(price.toString(), '12'); // 100 AIF的Wei值
+      const amountInWei = ethers.utils.parseUnits(price.toString(), '18'); // 100 AIF的Wei值
       console.log('exchange', amountInWei)
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -72,7 +70,6 @@ export default class EthJs {
       // 创建AIF合约实例
       const aifContract = new ethers.Contract(bnbContractAddress, bnbAbi, provider);
       const newgasLimit = ethers.utils.hexlify(limit); // 适当增加 gas 限制的值
-      const gasPrice = ethers.utils.parseUnits(gas, 'gwei'); // 适当的 gas 价格（示例值）
       const data = aifContract.interface.encodeFunctionData('exchange', [amountInWei]);
 
       // 构建交易对象
@@ -80,7 +77,6 @@ export default class EthJs {
         from: accounts[0], // 发送方地址
         to: bnbContractAddress, // 合约地址
         gasLimit: newgasLimit, // gas限制
-        gasPrice,
         data, // 要转账的数据
       };
       const res = await this.sendTransaction(transactionObject, provider)
@@ -91,6 +87,15 @@ export default class EthJs {
       Toast.clear()
       return null
     }
+  }
+  // 钱包USDT余额查询
+  getUsdtBlance = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const usdtContract = new ethers.Contract(usdtContractAddress, usdtContractAbi, provider);    
+    const accounts = await provider.listAccounts();
+    const usdtBalance = await usdtContract.balanceOf(accounts[0]);
+    const balanceInUSDT = ethers.utils.formatUnits(usdtBalance, '18'); 
+    return Math.floor(Number(balanceInUSDT) || 0)
   }
   translateSign = async () => {
     try {

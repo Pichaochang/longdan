@@ -8,7 +8,7 @@ const web3: any = new Web3Class();
 
 const Mine = () => {
   const cache: any = useRef(null);
-  const [inputValue, setInputValue] = useState(undefined as any);
+  const [inputValue, setInputValue] = useState(1);
   const [loading, setLoading] = useState(true);
   const [address, setAddress] = useState('');
   const formatAddress:any = function(a:any) {
@@ -36,7 +36,17 @@ const Mine = () => {
   const buyFn = async () => {
     console.log(inputValue)
     if (Number(inputValue) <= 0 || isNaN(inputValue)) {
-      Toast.show('請輸入大於0')
+      Toast.show('請輸入大於1')
+      return
+    }
+    const reg = /^[1-9]\d*$/
+    if (!reg.test(String(inputValue))) {
+      Toast.show('請輸入整数')
+      return
+    }
+    const blance = await web3.getUsdtBlance() ?? 0
+    if (blance < Number(inputValue || 0)) {
+      Toast.show('餘額不足')
       return
     }
     changeLoading(true);

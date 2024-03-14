@@ -1,8 +1,8 @@
 
 
 // USDT合约地址
-export const usdtContractAddress = '0xF5bD566ccA37039b824371931b653c3e28fec03C'
-export const bnbContractAddress = '0xAE720749AE8122F4731EFC63874A81Ca27c739E3'
+export const usdtContractAddress = '0x6BEeAaC65F9756770BBBb3Ac080EF160e2331134'
+export const bnbContractAddress = '0xD04f3ECaAfb18931406d88Ae1d8EB1aB5d75963D'
 export const rpc = {
     id: 97,
     chainId: "0x61",
