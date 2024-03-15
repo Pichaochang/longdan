@@ -108,11 +108,11 @@ const Mine = () => {
       <div className="egg-div">
         <img src="/egg.png" alt="" />
       </div>
-      <div className="text-bit" style={{marginTop: '-30px', position: 'relative', fontSize: '16px'}}>
+      <div className="text-bit" style={{marginTop: '-40px', position: 'relative', fontSize: '16px'}}>
         Bit world(比特世界)Wbe.3生態。Bit world由美國矩陣資本領投聯合澳大利亞加密貨幣研發組織發起;基於幣安智令78%C完全去中心化Wbe.3金融商業生態,打造Wbe.3社交軟件與元宇宙平臺:為引流龐大用戶參與,平臺發行代幣BTB作為未來整個生態應用通證助力參與者實現自身價值。
       </div>
 
-      <div className="text-bit">
+      <div className="text-bit" style={{paddingBottom: '20px'}}>
         <div className="long-text">{inputValue}龍蛋+{inputValue}USDT兌換={inputValue}BTB</div>
         <div className={styles.content}>
           <InputCard onChange={onChange} inputValue={inputValue} />
@@ -125,7 +125,7 @@ const Mine = () => {
               color: "#fff",
               width: "100%",
               height: "40px",
-              marginTop: '40px'
+              marginTop: '20px'
             }}
           >
             確認兌換

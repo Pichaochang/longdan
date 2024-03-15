@@ -114,7 +114,7 @@ code {
 }
 .home {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -146,6 +146,7 @@ code {
   margin-right: 3px;
 }
 .egg-div {
+  margin-top: -20px;
   text-align: center;
 }
 .text-bit {
@@ -153,21 +154,21 @@ code {
   background: #040911;
   border-radius: 16px;
   border: 1px solid #05356b;
-  padding: 19px;
-  margin-bottom: 20px;
+  padding: 15px 15px 10px;
+  margin-bottom: 15px;
   font-weight: 500;
   color: #3b3d42;
   /* opacity: 0.5; */
 }
 .long-text {
-  font-size: 22px;
+  font-size: 20px;
   color: #fff;
   font-weight: 700;
   font-style: italic;
   background: #040911;
   border-radius: 16px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   opacity: 1;
 
   /* border: 1px solid #05356B; */
